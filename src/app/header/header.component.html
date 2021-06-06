@@ -1,0 +1,23 @@
+<header class="fixed-top" [ngClass]="{'collapsed shadow': collapseHeader$ | async}">
+
+    <div class="container">
+        <div class="d-flex justify-content-between align-items-center">
+            <a>
+                <img class="logo" src="assets/logo.png" alt="Open logo">
+            </a>
+
+            <nav>
+                <ul class="list-unstyled m-0">
+                    <li><a>Products</a></li>
+                    <li><a>Solutions</a></li>
+                    <li><a>Pricing</a></li>
+                    <li class="d-none d-md-inline-block">
+                        <button>Login</button>
+                    </li>
+                    <li class="d-none d-md-inline-block"><button class="active">Get Started</button></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+</header>

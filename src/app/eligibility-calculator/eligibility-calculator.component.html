@@ -1,0 +1,106 @@
+<section class="eligibility-section">
+
+    <div class="container">
+
+        <div class="row align-items-start">
+            <div class="col-12 col-md-5 left-section pb-4">
+                <h2 class="mb-5 ml-4">We make it Super <br> Simple</h2>
+
+                <img width="100%" src="assets/collect_img-video.png" alt="Collect image video">
+
+                <img src="assets/accounting_dots.svg" alt="dots design" class="dots d-none d-md-block">
+            </div>
+            <div class="col col-md-1"></div>
+            <div class="col-12 col-md-6 right-section">
+
+                <div class="row no-gutters align-items-center">
+                    <div class="col-12 col-md-8">
+                        <div class="wrapper shadow-sm">
+                            <div class="eligibility-card">
+                                <div class="text-center bg-light py-2">Eligibility Calculator</div>
+
+
+                                <form class="p-4">
+
+                                    <div class="mb-4">
+                                        <small class="fw-500">Monthly Income</small>
+                                        <div class="amount">{{actualIncome | currency:'INR':'symbol':'.0-0'}}</div>
+                                        <mat-slider color="primary" (input)="actualIncome = $event.value"
+                                            [value]="actualIncome" [min]="incomeMin" [max]="incomeMax"
+                                            aria-label="unit(s)"></mat-slider>
+                                        <div class="d-flex justify-content-between">
+                                            <small class="text-black-50 range">{{ incomeMin |
+                                                currency:'INR':'symbol':'.0-0' }}</small>
+                                            <small class="text-black-50 range">{{ incomeMax |
+                                                currency:'INR':'symbol':'.0-0' }}</small>
+                                        </div>
+                                    </div>
+
+                                    <div class="mb-4">
+                                        <small class="fw-500">Monthly Expense</small>
+                                        <div class="amount">{{monthlyExpense | currency:'INR':'symbol':'.0-0'}}</div>
+                                        <mat-slider color="primary" (input)="monthlyExpense = $event.value"
+                                            [value]="monthlyExpense" [min]="expenceMin" [max]="expenceMax"
+                                            aria-label="unit(s)"></mat-slider>
+                                    </div>
+
+                                    <div class="mb-2">
+                                        <small class="fw-500">Repayment Tenure</small>
+                                        <mat-form-field class="w-100">
+                                            <mat-select value="6">
+                                                <mat-option value="6">6 Months</mat-option>
+                                                <mat-option value="12">12 Months</mat-option>
+                                            </mat-select>
+                                        </mat-form-field>
+                                    </div>
+
+                                    <div class="mb-3 d-flex justify-content-between">
+                                        <small class="fw-500">Do you have any existing loans?</small>
+                                        <mat-slide-toggle color="primary" checked="true"></mat-slide-toggle>
+                                    </div>
+
+
+                                    <div>
+                                        <small class="fw-500">EMI for existing loan(optional)</small>
+                                        <mat-form-field class="w-100" appearance="standard">
+                                            <span matPrefix class="prefix mr-1">₹</span>
+                                            <input matInput [(ngModel)]="emiAmount" name="emiAmount">
+                                        </mat-form-field>
+                                    </div>
+
+
+
+                                </form>
+
+
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4 pl-2">
+                        <div class="align-items-center d-flex final-section flex-column">
+                            <div class="mb-3">
+                                <p class="m-0 text-center"><small>Loan Amount</small></p>
+                                <div class="amount text-center fw-500">{{ 1000000 | currency:'INR':'symbol':'.0-0' }}
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <p class="m-0 text-center"><small>Your EMI will be</small></p>
+                                <div class="amount text-center fw-500">{{ emiAmount | currency:'INR':'symbol':'.0-0' }}
+                                </div>
+                            </div>
+                            <button>Get Money</button>
+                        </div>
+                    </div>
+                </div>
+
+                <img src="assets/accounting_dots.svg" alt="dots design" class="dots d-none d-md-block">
+
+
+            </div>
+        </div>
+
+    </div>
+
+
+</section>

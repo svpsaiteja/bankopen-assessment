@@ -1,1 +1,45 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import "~bootstrap/scss/bootstrap";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500&display=swap');
+@import "./app/scss-variables.scss";
+
+html, body { height: 100%; }
+body { margin: 0; font-family: 'Montserrat', sans-serif; }
+
+
+
+small {
+    font-size: 12px;
+}
+
+.fw-500 {
+    font-weight: 500;
+}
+
+.fw-600 {
+    font-weight: 600;
+}
+
+.text-50 {
+    color: #00000080;
+}
+
+
+button {
+    display: inline-block;
+    border: 2px solid $purple;
+    border-radius: 24px;
+    color: $purple;
+    background: white;
+    font-weight: 500;
+    min-height: 40px;
+    transition: background 0.2s ease-out;
+    padding: 0 25px;
+    font-size: 14px;
+
+    &.active, &:hover {
+        background: $purpleGradient;
+        color: white;
+    }
+}

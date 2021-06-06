@@ -1,0 +1,95 @@
+@import './../scss-variables.scss';
+
+
+
+.eligibility-section {
+    min-height: 800px;
+    background: url(/assets/circle.svg) no-repeat top -100px right -100px, url(/assets/blob-small.svg) no-repeat top 180px left -80px;
+    background-size: 70vw, 30vw;
+    padding-top: 200px;
+
+    .left-section {
+        position: relative;
+        h2 {
+            position: relative;
+            &:after {
+                position: absolute;
+                content: '';
+                height: 4px;
+                width: 100px;
+                top: calc(100% + 15px);
+                left: 0;
+                background-color: #333;
+                border-radius: 8px;
+            }
+        }
+
+        
+    }
+
+    .right-section {
+        position: relative;
+        mat-slider {
+            margin: -20px -10px;
+            width: calc(100% + 15px);
+        }
+
+        mat-form-field {
+            margin-top: -15px;
+            * {
+                font-family: 'Montserrat', sans-serif !important;
+            }
+            ::ng-deep {
+                .mat-select-value-text {
+                    font-size: 20px;
+                    font-weight: 500;
+                }
+            }
+            .prefix, ::ng-deep input {
+                font-size: 20px;
+                font-weight: 500;
+            }
+        }
+
+        .wrapper {
+            overflow: hidden;
+            border-radius: 12px;
+            background: white;
+            .eligibility-card {
+                small.range {
+                    font-size: 9px;
+                    font-weight: 600;
+                }
+            }
+        }
+
+        .final-section {
+            background: $purpleGradient;
+            color: white;
+            border-top-right-radius: 12px;
+            border-bottom-right-radius: 12px;
+            padding: 56px 20px;
+
+            button {
+                border: none;
+            }
+        }
+
+        .amount {
+            font-size: 20px;
+            font-weight: 500;
+        }
+
+        img.dots {
+            z-index: -1;
+            right: 0;
+        }
+    }
+
+    img.dots {
+        position: absolute;
+        bottom: -16px;
+        right: -80px;
+    }
+
+}

@@ -1,0 +1,28 @@
+header.fixed-top {
+    img.logo {
+        width: 120px;
+        transition: width 0.2s ease-in-out;
+    }
+
+    &.collapsed {
+        background-color: white;
+        img.logo {
+            width: 80px;
+        }
+    }
+
+
+}
+
+
+nav {
+    ul li {
+        display: inline-block;
+        &:not(:last-child) {
+            margin-right: 25px;
+        }
+        a {
+            font-weight: 600;
+        }
+    }
+}
